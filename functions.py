@@ -1,50 +1,59 @@
+#dragon.py
+
 import random
 import time
- 
+
 def displayIntro():
-      print('''You are in a land full of dragons. In front of you,
- 6. you see two caves. In one cave, the dragon is friendly
- 7. and will share his treasure with you. The other dragon
- 8. is greedy and hungry, and will eat you on sight.''')
-      print()
+    print('''Hello? Wake up buddy!we are in another world, and how it looks, in one full of dragons !!! There is a dragon front of you!,
+look! two caves. In the first cave, is possible that we may find something to calm him is friendly. 
+At the other cave there will be nothing, and it is going to eat us!.''')
+    print()
 
 def chooseCave():
-     cave = ''
-     while cave != '1' and cave != '2':
-         print('Which cave will you go into? (1 or 2)')
-         cave = input()
+    cave = ''
+    while cave != '1' and cave != '2':
+        print('Which cave will you go into? (1 or 2)')
+        cave = input()
 
-     return cave
+    return cave
+
+def victory():
+    print('we found a baby dragon, it could be his son, possibly...there is the dragon!, wait he is calming down, he is meeting with his baby...they leave...we managed to survive for now...')
+
+def history():
+    print('You approach the cave...')
+    time.sleep(2)
+    print('It is dark and spooky...')
+    time.sleep(2)
+    print('Wait!!! there is the dragon...')
+    print()
+    time.sleep(2)
 
 def checkCave(chosenCave):
-     print('You approach the cave...')
-     time.sleep(2)
-     print('It is dark and spooky...')
-     time.sleep(2)
-     print('A large dragon jumps out in front of you! He opens his jaws and...')
-     print()
-     time.sleep(2)
+    history()
 
-     friendlyCave = random.randint(1, 2)
-
-     if chosenCave == str(friendlyCave):
-         print('Gives you his treasure!')
-     else:
-         print('Gobbles you down in one bite!')
-
-
-
-playAgain = 'yes'
-while playAgain == 'yes' or playAgain == 'y':
-     displayIntro()
-     caveNumber = chooseCave()
-     checkCave(caveNumber)
-
-     print("Do you wanna know what would happen if you choose the other one")
-     what_if_ = input()
-     if input()== "yes":
-          print(displayIntro)   
+    friendlyCave = random.randint(1, 2)
     
-
-
-
+    if chosenCave == str(friendlyCave):
+        victory()
+    else:
+        print('Gobbles you down in one bite!')
+            
+        print("theres is another story")
+        time.sleep(2)
+        print("Would you like to see it? (yes or no)")
+        ending = input()
+        if ending == "yes":
+            history()
+            victory()
+    
+playAgain = 'yes'
+while True:
+    while playAgain == 'yes' or playAgain == 'y':
+        displayIntro()
+        caveNumber = chooseCave()
+        checkCave(caveNumber)
+        print('Do you want to play again? (yes or no)')
+        playAgain = input()
+    if playAgain == "no":
+        break
