@@ -23,3 +23,6 @@ while True:
 
     else:
         print("lose")
+        
+        
+        
