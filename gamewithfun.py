@@ -1,6 +1,6 @@
 import random
-options = (['rock', 'paper', 'siccers'])
-computer_ch = random.choice(['rock', 'paper', 'siccers'])
+options = (['rock', 'paper', 'Scissors'])
+computer_ch = random.choice(['rock', 'paper', 'Scissors'])
 print(computer_ch)
 
 def mesage(texto):
@@ -8,7 +8,7 @@ def mesage(texto):
 
 def game():
     while True :
-        user_ch= input("choose a world of this list : 'rock', 'paper', 'siccers': ")
+        user_ch= input("choose a world of this list : 'rock', 'paper', 'Scissors': ")
         
         if user_ch == "quit":
             break
@@ -20,7 +20,7 @@ def game():
         if user_ch == computer_ch:
             mesage("tie")
     
-        elif (user_ch == "rock" and computer_ch == "scissors") or (user_ch == "paper" and computer_ch == "rock") or (user_ch == "scissors" and computer_ch == "paper"):
+        elif (user_ch == "rock" and computer_ch == "Scissors") or (user_ch == "paper" and computer_ch == "rock") or (user_ch == "Scissors" and computer_ch == "paper"):
             mesage("Won")
 
         else:
