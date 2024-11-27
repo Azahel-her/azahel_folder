@@ -91,6 +91,8 @@ def main():
             complete_task()
         elif choice == "6":
             filter_tasks()
+        elif choice == "7":
+            break
             
 
 main()

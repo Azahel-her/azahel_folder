@@ -29,8 +29,8 @@ def read_product_csv(filename):
   return products_id, quantities
 
 def main():
-  products = read_product("/content/products (1).csv")
-  products_id = read_product_csv("/content/request.csv")[0]
+  products = read_product("products (1).csv")
+  products_id = read_product_csv("request.csv")[0]
   order_quantities = read_product_csv("/content/request.csv")[1]
 
   print()

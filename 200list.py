@@ -38,37 +38,37 @@ print(list[1:4])
 
 
 #Update a list
-#science = ["art", "chemistry", "math"]
+science = ["art", "chemistry", "math"]
 
-#science[0] = "Biology"
+science[0] = "Biology"
 
-#print(science)
+(science)
 
-#science[2] = "geology"
+science[2] = "geology"
 
-#print(science)
+print(science)
 
-#integers = [2, 5, 9, 20, 27]
+integers = [2, 5, 9, 20, 27]
 
-#integers[-1] = 30.5
+integers[-1] = 30.5
 
-#print(integers)
+print(integers)
 
-#integers.remove(5)
+integers.remove(5)
 
-#print(integers)
+print(integers)
 
-#integers.pop(0)
+integers.pop(0)
 
-#print(integers)
+print(integers)
 
-#list_fruits = ["lemon", "Orange", "melon"]
+list_fruits = ["lemon", "Orange", "melon"]
 
 #pop, remove, del
 
-#del list_fruits[0]
+del list_fruits[0]
 
-#print(list_fruits)
+print(list_fruits)
 
 #name_apemd
 

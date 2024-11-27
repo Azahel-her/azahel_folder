@@ -3,10 +3,10 @@ def load_contacts(filename):
     contacts = {}
     with open(filename, mode = 'r', newline = '') as file :
         reader = csv.reader(file)
-        for row in reader :
+        for row in reader:
             first_name = row[0]
             last_name = row[1]
-            phone_number =row[2]
+            phone_number = row[2]
             email = row[3]
             contacts[last_name] = {first_name, phone_number, email}
     return contacts
@@ -31,8 +31,11 @@ def main():
    
     contact_info = contacts.get(last_name)
     
-main()    
+    display_coutact_info(contact_info)
     
+if __name__=="__main__":
+    main()
+        
     
     
     
